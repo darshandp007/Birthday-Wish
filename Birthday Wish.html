@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Form Darshan Patel</title>
+    <style>
+            body{
+                font-family:Arial, Helvetica,sans-serif;
+                padding:0;
+                margin:0;
+                background-color:black;
+            }
+            .container{
+                width:80%;
+                margin:auto;
+                overflow:hidden;
+                margin-top: 100px;
+            }
+            #demo1,#demo2,#demo3,#demo4{
+                
+                font-family: 'Londrina Outline', cursive;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 7em;
+                font-weight: bold;
+                letter-spacing: 0.11em;
+            }
+            #demo1{
+                color:yellow;
+            }
+            #demo2{
+                color:red;
+            }
+            #demo3{
+                color:blue;
+            }
+            #demo4{
+                color:green;
+            }  
+            .red{
+                text-shadow:
+                0 0 5px red,
+                0 0 10px red,
+                0 0 20px red,
+                0 0 40px red,
+                0 0 80px red,
+                0 0 90px red,
+                0 0 100px red,
+                0 0 150px red;
+            }
+            .yellow{
+                text-shadow:
+                0 0 5px yellow,
+                0 0 10px yellow,
+                0 0 20px yellow,
+                0 0 40px yellow,
+                0 0 80px yellow,
+                0 0 90px yellow,
+                0 0 100px yellow,
+                0 0 150px yellow;
+            }
+            .green{
+                text-shadow:
+                    0 0 5px #7bffcc,
+                    0 0 10px #7bffce,
+                    0 0 20px #7bffce,
+                    0 0 40px #7bffce,
+                    0 0 80px #7bffce,
+                    0 0 90px #7bffce,
+                    0 0 100px #7bffce,
+                    0 0 150px #7bffce;
+            }
+            .blue{
+                text-shadow:
+                    0 0 5px #7bcfff,
+                    0 0 10px #7bcfff,
+                    0 0 20px #7bcfff,
+                    0 0 40px #7bcfff,
+                    0 0 80px #7bcfff,
+                    0 0 90px #7bcfff,
+                    0 0 100px #7bcfff,
+                    0 0 150px #7bcfff;
+            }
+            .white{
+                text-shadow:
+                    0 0 5px ,
+                    0 0 10px #f3f4f5,
+                    0 0 20px #f3f4f5,
+                    0 0 40px #f3f4f5,
+                    0 0 80px #f3f4f5,
+                    0 0 90px #f3f4f5,
+                    0 0 100px #f3f4f5,
+                    0 0 150px #f3f4f5;
+            }
+            #dot{
+                color: red;
+                text-align: center;
+                font-size: 5em;
+                font-weight: bold;
+                letter-spacing: 0.15em;
+                
+            }
+    </style>
+</head>
+<body>
+    <div class="container"><p id="demo1" class="red">Happy</p></div>
+    <div class="container"><p id="demo2" class="yellow">Birthday</p></div>
+    <div class="container"><p id="demo3" class="green">Name</p></div>   <!--Birthday People Name-->
+    <div class="conatainer"><h1 id="dot" class="white">---------------</h1></div>
+    <div class="container"><p id="demo4" class="blue"></p></div>
+
+    <script>
+        document.getElementById("demo1").style.display = "none";  
+        document.getElementById("demo2").style.display = "none";
+        document.getElementById("demo3").style.display = "none";
+        document.getElementById("dot").style.display = "none";
+        document.getElementById("demo4").style.display = "none";
+        var i=1;
+        window.setTimeout(delay,1000);
+        document.getElementById("demo4").innerHTML = "From DP";
+        function delay(){
+            if(i==4){
+                document.getElementById("dot").style.display = "block";
+            }
+            document.getElementById("demo"+i).style.display = "block";
+            i++;
+            setTimeout(delay,2000);
+        }
+    </script>
+
+</body>
+</html>
